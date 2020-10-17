@@ -7,14 +7,14 @@ const square = { width: 175, height: 175 }
 
 export function Home() {
     const { APP_NAME } = Constantes;
-    const { menu, grid, nav, opacarImg, contenedorPrincipal, parrafo, efectoHoverImgPrincipal } = Style;
+    const { menu, grid, nav, opacarImg, contenedorPrincipal, parrafo, efectoHoverImgPrincipal, sombra } = Style;
 
     const [activeItem, setActiveItem] = useState('bio');
     const handleItemClick = (e, { name }) => setActiveItem(name);
 
     return (
         <div>
-            <Card className={nav} fluid color='gray' header={APP_NAME} />
+            <Card className={nav} fluid color='blue' header={APP_NAME} />
 
             <Container className={contenedorPrincipal}>
                 <Grid columns={3} className={grid} stackable>
@@ -27,7 +27,7 @@ export function Home() {
                                     praesentium, explicabo quo repellendus dignissimos.</p>
                             </div>
                         </Grid.Column>
-                        <Grid.Column centered>
+                        <Grid.Column className={sombra}>
                             <Reveal animated='move up' className={opacarImg}>
                                 <Reveal.Content visible>
                                     <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' size='massive' />
@@ -37,7 +37,7 @@ export function Home() {
                                 </Reveal.Content>
                             </Reveal>
                         </Grid.Column>
-                        <Grid.Column>
+                        <Grid.Column className={sombra}>
                             <Reveal animated='move up' className={opacarImg}>
                                 <Reveal.Content visible>
                                     <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' size='massive' />
