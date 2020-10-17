@@ -43,3 +43,10 @@
     padding: 15px;
     background: #e7e7e7;
 }
+
+.textoInicial{
+    text-align: center;
+    position: relative;
+    top: -160px;
+    color: black !important;
+}

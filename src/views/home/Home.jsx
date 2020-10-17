@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, Grid, Image, Reveal, Card, Container } from 'semantic-ui-react';
+import { Menu, Grid, Image, Reveal, Card, Container, Button } from 'semantic-ui-react';
 import Constantes from '../../constants/Constants';
 import Style from './Home.module.css'
 
@@ -7,7 +7,7 @@ const square = { width: 175, height: 175 }
 
 export function Home() {
     const { APP_NAME } = Constantes;
-    const { menu, grid, nav, opacarImg, contenedorPrincipal, parrafo, centrarContenido } = Style;
+    const { menu, grid, nav, opacarImg, contenedorPrincipal, parrafo, centrarContenido, textoInicial } = Style;
 
     const [activeItem, setActiveItem] = useState('bio');
     const handleItemClick = (e, { name }) => setActiveItem(name);
@@ -30,10 +30,12 @@ export function Home() {
                         <Grid.Column centered>
                             <Reveal animated='move up' className={opacarImg}>
                                 <Reveal.Content visible>
-                                    <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' size='massive' />
+                                <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' size='massive' />
+                                   <p className={textoInicial}>Haz clic</p>
                                 </Reveal.Content>
                                 <Reveal.Content hidden>
                                     <Image src='https://react.semantic-ui.com/images/avatar/large/justen.jpg' size='massive' />
+                                    
                                 </Reveal.Content>
                             </Reveal>
                         </Grid.Column>
@@ -41,6 +43,7 @@ export function Home() {
                             <Reveal animated='move up' className={opacarImg}>
                                 <Reveal.Content visible>
                                     <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' size='massive' />
+                                    <p className={textoInicial}>Haz clic</p>
                                 </Reveal.Content>
                                 <Reveal.Content hidden>
                                     <Image src='https://react.semantic-ui.com/images/avatar/large/justen.jpg' size='massive' />
