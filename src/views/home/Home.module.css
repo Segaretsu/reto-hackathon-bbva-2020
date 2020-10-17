@@ -2,9 +2,21 @@
     text-align: right;
 }
 
+.contenedorPrincipal {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 20px;
+}
+
+@media(max-width: 800px) {
+    .contenedorPrincipal {
+        margin-bottom: 80px;
+    }
+}
+
 .menu {
     position: fixed;
-    bottom: 0px;
+    bottom: 15px;
     width: 100%;
     background: #000;
     color: #fff;
@@ -16,4 +28,10 @@
 
 .opacarImg {
     opacity: 0.4;
+    transition: .5s;
+}
+
+.opacarImg:hover {
+    opacity: 1;
+    cursor: pointer;
 }
