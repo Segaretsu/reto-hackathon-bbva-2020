@@ -17,7 +17,7 @@ export function Home() {
         <div>
             <Card className={nav} fluid color='gray' header={APP_NAME} />
 
-            <div className={contenedorPrincipal}>
+            <Container className={contenedorPrincipal}>
                 <Grid columns={3} className={grid} stackable>
                     <Grid.Row>
                         <Grid.Column>
@@ -45,7 +45,7 @@ export function Home() {
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
-            </div>
+            </Container>
 
             <Menu tabular className={menu}>
                 <Menu.Item
