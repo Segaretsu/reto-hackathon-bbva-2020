@@ -13,7 +13,8 @@ export const desiciones = {
             rutaImagen: '',
             descripcion: 'Una de las metas de José es conseguir una casa propia, para esto acepta una oportunidad de trabajo que le dobla su salario actual',
             seleccionada: true
-        }
+        },
+        sinHijos: true,
     },
 
     decisionPadre: {
@@ -42,5 +43,6 @@ export const desiciones = {
             descripcion: 'José decide no ir',
             seleccionada: false
         },
+        sinHijos: false,
     }
 };
