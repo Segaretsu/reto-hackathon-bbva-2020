@@ -26,8 +26,20 @@
     margin-bottom: 20px;
 }
 
-.efectoHoverImgPrincipal:hover {
-    position: absolute;
+.efectoHoverImgPrincipal {
+    z-index: 50;
+    transition: 1.5s;
+}
+
+img {
+    border-radius: 25px 20px 0 0;
+}
+
+.efectoHoverImgPrincipal img:hover ~ p, .efectoHoverImgPrincipal p:hover {
+    transition: 2s;
+    background: rgba(60, 125, 168, 0.699);
+    border-radius: 0 0 20px 20px;
+    color: #fff;
 }
 
 .opacarImg {
