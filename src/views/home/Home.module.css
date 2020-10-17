@@ -1,3 +1,7 @@
+.nav {
+    text-align: right;
+}
+
 .menu {
     position: fixed;
     bottom: 0px;
@@ -8,4 +12,8 @@
 
 .grid {
     margin-top: 20px;
+}
+
+.opacarImg {
+    opacity: 0.4;
 }

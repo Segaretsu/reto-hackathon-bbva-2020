@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container } from 'semantic-ui-react';
-import { Button, Menu, Grid, Image, Segment } from 'semantic-ui-react';
+import { Menu, Grid, Image, Segment, Reveal, Card } from 'semantic-ui-react';
 import Constantes from '../../constants/Constants';
 import Style from './Home.module.css'
 
@@ -8,32 +8,40 @@ const square = { width: 175, height: 175 }
 
 export function Home() {
     const { APP_NAME } = Constantes;
-    const { menu, grid } = Style;
+    const { menu, grid, nav, opacarImg } = Style;
 
     const [activeItem, setActiveItem] = useState('bio');
     const handleItemClick = (e, { name }) => setActiveItem(name);
 
     return (
         <div>
-            <Container>
-                <h1>{APP_NAME}</h1>
-                <Button animated='fade'>
-                    <Button.Content visible>Dame clic</Button.Content>
-                    <Button.Content hidden>Tan obediente</Button.Content>
-                </Button>
-            </Container>
+            <Card className={nav} fluid color='gray' header={APP_NAME} />
 
             <Segment>
-                <Grid columns={3} className={grid}>
+                <Grid columns={3} className={grid} stackable>
                     <Grid.Row>
-                        <Grid.Column>
-                            <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
+                        <Grid.Column centered>
+                            <Reveal animated='move up' className={opacarImg}>
+                                <Reveal.Content visible>
+                                    <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' size='large' />
+                                </Reveal.Content>
+                                <Reveal.Content hidden>
+                                    <Image src='https://react.semantic-ui.com/images/avatar/large/justen.jpg' size='large' />
+                                </Reveal.Content>
+                            </Reveal>
                         </Grid.Column>
                         <Grid.Column>
-                            <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
+                            <Image src='https://react.semantic-ui.com/images/avatar/large/nan.jpg' size='large' />
                         </Grid.Column>
                         <Grid.Column>
-                            <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
+                            <Reveal animated='move up' className={opacarImg}>
+                                <Reveal.Content visible>
+                                    <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' size='large' />
+                                </Reveal.Content>
+                                <Reveal.Content hidden>
+                                    <Image src='https://react.semantic-ui.com/images/avatar/large/justen.jpg' size='large' />
+                                </Reveal.Content>
+                            </Reveal>
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
