@@ -7,20 +7,20 @@ const square = { width: 175, height: 175 }
 
 export function Home() {
     const { APP_NAME } = Constantes;
-    const { menu, grid, nav, opacarImg, contenedorPrincipal, parrafo, centrarContenido } = Style;
+    const { menu, grid, nav, opacarImg, contenedorPrincipal, parrafo, efectoHoverImgPrincipal } = Style;
 
     const [activeItem, setActiveItem] = useState('bio');
     const handleItemClick = (e, { name }) => setActiveItem(name);
 
     return (
-        <div style={{'margin-bottom':'10px'}}>
+        <div>
             <Card className={nav} fluid color='gray' header={APP_NAME} />
 
             <Container className={contenedorPrincipal}>
                 <Grid columns={3} className={grid} stackable>
                     <Grid.Row>
                         <Grid.Column>
-                            <div>
+                            <div className={efectoHoverImgPrincipal}>
                                 <Image src='https://react.semantic-ui.com/images/avatar/large/nan.jpg' size='massive' />
                                 <p className={parrafo}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut nulla vero quaerat libero neque,
                                     adipisci rerum. Aliquam, accusamus! Doloribus corporis numquam vitae asperiores id maiores

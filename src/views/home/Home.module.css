@@ -7,27 +7,27 @@
 
 .contenedorPrincipal {
     margin-top: 20px;
-    margin-bottom: 25px;
 }
 
-@media(min-height: 635px) {
+.menu {
+    z-index: 10000000;
+}
+
+@media(min-height: 625px) and (min-width: 700px) {
     .menu {
         position: fixed;
-        bottom: 20px;
+        bottom: 0px;
         width: 100%;
     }
 }
 
 .grid {
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.centrarContenido {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.efectoHoverImgPrincipal:hover {
+    position: absolute;
 }
 
 .opacarImg {
