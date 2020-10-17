@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, Grid, Image, Reveal, Card, Container } from 'semantic-ui-react';
+import { Menu, Grid, Image, Reveal, Card, Container, Modal, Button, Header } from 'semantic-ui-react';
 import Constantes from '../../constants/Constants';
 import Style from './Home.module.css'
 
@@ -11,6 +11,7 @@ export function Home() {
 
     const [activeItem, setActiveItem] = useState('bio');
     const handleItemClick = (e, { name }) => setActiveItem(name);
+    const [open, setOpen] = React.useState(false)
 
     return (
         <div>
@@ -21,9 +22,37 @@ export function Home() {
                     <Grid.Row>
                         <Grid.Column>
                             <div className={efectoHoverImgPrincipal}>
-                                <Image src='https://react.semantic-ui.com/images/avatar/large/nan.jpg' size='massive' />
+
+                                <Modal
+                                    onClose={() => setOpen(false)}
+                                    onOpen={() => setOpen(true)}
+                                    open={open}
+                                    trigger={
+                                        <Image src='https://react.semantic-ui.com/images/avatar/large/nan.jpg' size='massive' />
+                                    }
+                                >
+                                    <Modal.Header>Descripción</Modal.Header>
+                                    <Modal.Content image>
+                                        <Image size='medium' src='https://react.semantic-ui.com/images/avatar/large/nan.jpg' wrapped />
+                                        <Modal.Description>
+                                            <Header>Descripción de la situación</Header>
+                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut nulla vero quaerat libero neque,
+                                            adipisci rerum. Aliquam, accusamus! Doloribus corporis numquam vitae asperiores id maiores
+                                            praesentium, explicabo quo repellendus dignissimos.</p>
+                                            <p><strong>
+                                                Puedes escoger la respuesta situando el mouse sobre la imagen y presionando clic
+                                                en el botón que va a ser visible sobre la misma.
+                                            </strong></p>
+                                        </Modal.Description>
+                                    </Modal.Content>
+                                    <Modal.Actions>
+                                        <Button color='black' onClick={() => setOpen(false)}>
+                                            Cerrar imagen
+                                        </Button>
+                                    </Modal.Actions>
+                                </Modal>
                                 <p className={parrafo}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut nulla vero quaerat libero neque,
-                                    adipisci rerum. Aliquam, accusamus! Doloribus corporis numquam vitae asperiores id maiores
+                                adipisci rerum. Aliquam, accusamus! Doloribus corporis numquam vitae asperiores id maiores
                                     praesentium, explicabo quo repellendus dignissimos.</p>
                             </div>
                         </Grid.Column>
