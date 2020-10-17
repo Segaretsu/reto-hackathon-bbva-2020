@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, Grid, Image, Reveal, Card, Container } from 'semantic-ui-react';
+import { Menu, Grid, Image, Reveal, Card, Container, Modal, Button, Header } from 'semantic-ui-react';
 import Constantes from '../../constants/Constants';
 import Style from './Home.module.css'
 
@@ -7,27 +7,56 @@ const square = { width: 175, height: 175 }
 
 export function Home() {
     const { APP_NAME } = Constantes;
-    const { menu, grid, nav, opacarImg, contenedorPrincipal, parrafo, centrarContenido } = Style;
+    const { menu, grid, nav, opacarImg, contenedorPrincipal, parrafo, efectoHoverImgPrincipal, sombra } = Style;
 
     const [activeItem, setActiveItem] = useState('bio');
     const handleItemClick = (e, { name }) => setActiveItem(name);
+    const [open, setOpen] = React.useState(false)
 
     return (
-        <div style={{'margin-bottom':'10px'}}>
-            <Card className={nav} fluid color='gray' header={APP_NAME} />
+        <div>
+            <Card className={nav} fluid color='blue' header={APP_NAME} />
 
             <Container className={contenedorPrincipal}>
                 <Grid columns={3} className={grid} stackable>
                     <Grid.Row>
                         <Grid.Column>
-                            <div>
-                                <Image src='https://react.semantic-ui.com/images/avatar/large/nan.jpg' size='massive' />
+                            <div className={efectoHoverImgPrincipal}>
+
+                                <Modal
+                                    onClose={() => setOpen(false)}
+                                    onOpen={() => setOpen(true)}
+                                    open={open}
+                                    trigger={
+                                        <Image src='https://react.semantic-ui.com/images/avatar/large/nan.jpg' size='massive' />
+                                    }
+                                >
+                                    <Modal.Header>Descripción</Modal.Header>
+                                    <Modal.Content image>
+                                        <Image size='medium' src='https://react.semantic-ui.com/images/avatar/large/nan.jpg' wrapped />
+                                        <Modal.Description>
+                                            <Header>Descripción de la situación</Header>
+                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut nulla vero quaerat libero neque,
+                                            adipisci rerum. Aliquam, accusamus! Doloribus corporis numquam vitae asperiores id maiores
+                                            praesentium, explicabo quo repellendus dignissimos.</p>
+                                            <p><strong>
+                                                Puedes escoger la respuesta situando el mouse sobre la imagen y presionando clic
+                                                en el botón que va a ser visible sobre la misma.
+                                            </strong></p>
+                                        </Modal.Description>
+                                    </Modal.Content>
+                                    <Modal.Actions>
+                                        <Button color='black' onClick={() => setOpen(false)}>
+                                            Cerrar imagen
+                                        </Button>
+                                    </Modal.Actions>
+                                </Modal>
                                 <p className={parrafo}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut nulla vero quaerat libero neque,
-                                    adipisci rerum. Aliquam, accusamus! Doloribus corporis numquam vitae asperiores id maiores
+                                adipisci rerum. Aliquam, accusamus! Doloribus corporis numquam vitae asperiores id maiores
                                     praesentium, explicabo quo repellendus dignissimos.</p>
                             </div>
                         </Grid.Column>
-                        <Grid.Column centered>
+                        <Grid.Column className={sombra}>
                             <Reveal animated='move up' className={opacarImg}>
                                 <Reveal.Content visible>
                                     <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' size='massive' />
@@ -37,7 +66,7 @@ export function Home() {
                                 </Reveal.Content>
                             </Reveal>
                         </Grid.Column>
-                        <Grid.Column>
+                        <Grid.Column className={sombra}>
                             <Reveal animated='move up' className={opacarImg}>
                                 <Reveal.Content visible>
                                     <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' size='massive' />
