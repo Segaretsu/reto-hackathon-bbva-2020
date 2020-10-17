@@ -35,10 +35,6 @@
     cursor: pointer;
 }
 
-img.bordeImg {
-    border-radius: 25px 20px 0 0;
-}
-
 .efectoHoverImgPrincipal img:hover ~ p, .efectoHoverImgPrincipal p:hover {
     transition: 1.5s;
     background: rgba(60, 125, 168, 0.699);
