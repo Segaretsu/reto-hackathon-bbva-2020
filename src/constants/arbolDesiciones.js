@@ -7,7 +7,7 @@ export function tomarDesicion(nodoActual) {
 }
 
 export const desiciones = {
-    desicionInicial: {
+    decisionInicial: {
         opcion1: {
             newDesicion: "desicionPadre",
             rutaImagen: '',
@@ -16,7 +16,7 @@ export const desiciones = {
         }
     },
 
-    desicionPadre: {
+    decisionPadre: {
         desicionTomada: {
             rutaImagen: '',
             descripcion: 'Para celebrar, sus amigos le dicen que debería salir el proximo fin de semana, ya que es su primer sueldo y debería celebrarlo a lo grande'
