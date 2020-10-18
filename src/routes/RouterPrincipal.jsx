@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 // Plugins a hacer routing
 import { Home } from '../views/home/Home';
+import { VisorDecisiones } from '../views/visor-decisiones/VisorDesiciones';
 import { RecoilRoot } from 'recoil';
 
 export function RouterPrincipal() {
@@ -13,8 +14,11 @@ export function RouterPrincipal() {
         <Router>
             <RecoilRoot>
                 <Switch>
-                    <Route path="/">
+                    <Route exact path="/">
                         <Home />
+                    </Route>
+                    <Route path="/testDesiciones">
+                        <VisorDecisiones />
                     </Route>
                 </Switch>
             </RecoilRoot>
