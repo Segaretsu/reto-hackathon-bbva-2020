@@ -10,7 +10,7 @@ export const desiciones = {
     decisionInicial: {
         opcion1: {
             newDesicion: "desicionPadre",
-            rutaImagen: '',
+            rutaImagen: 'x',
             descripcion: 'Una de las metas de José es conseguir una casa propia, para esto acepta una oportunidad de trabajo que le dobla su salario actual',
             seleccionada: true
         },
@@ -24,13 +24,13 @@ export const desiciones = {
         },
         opcion1: {
             newDesicion: '',
-            rutaImagen: '',
+            rutaImagen: 'a',
             descripcion: 'José decide no ir',
             seleccionada: false
         },
         opcion2: {
             newDesicion: '',
-            rutaImagen: '',
+            rutaImagen: 'b',
             descripcion: 'José decide que por ahora no puede ir, pero comenta que puede ir en otro momento que todos tengan dinero',
             retroAlimentacion: {
                 descripcion: 'José sale sin problema con sus amigos el proximo pago',
@@ -39,7 +39,7 @@ export const desiciones = {
         },
         opcion3: {
             newDesicion: '',
-            rutaImagen: '',
+            rutaImagen: 'c',
             descripcion: 'José decide no ir',
             seleccionada: false
         },
