@@ -13,7 +13,9 @@ export const opcionesDeDecision = selector({
                 const data = [
                     arbol[key].descripcion,
                     arbol[key].rutaImagen,
-                    arbol[key].seleccionada
+                    arbol[key].seleccionada,
+                    arbol[key].newDesicion,
+                    key
                 ]
                 lista.get('decisiones').push(data);
             }

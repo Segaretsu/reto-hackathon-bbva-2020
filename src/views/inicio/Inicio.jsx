@@ -3,6 +3,11 @@ import { Container, Card, Image, Button, Icon, Grid } from 'semantic-ui-react';
 import Constantes from '../../constants/Constants';
 import Style from '../home/Home.module.css';
 import Styles from './Inicio.module.css';
+// import {
+//     BrowserRouter as Router,
+//     Switch,
+//     Route, Redirect
+// } from "react-router-dom";
 
 
 export function Inicio() {
@@ -23,7 +28,7 @@ export function Inicio() {
                             <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, assumenda
                                  tempora aut numquam doloribus rerum ducimus expedita illum aliquam facilis
                                   nostrum maxime doloremque porro nisi libero. Eligendi quaerat dolorum ratione!</h3>
-                            <Button icon labelPosition='right' className={btn}>
+                            <Button icon labelPosition='right' className={btn} href='/inicio'>
                                 Comenzar
                                 <Icon name='right arrow' />
                             </Button>

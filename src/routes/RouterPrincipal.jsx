@@ -16,13 +16,13 @@ export function RouterPrincipal() {
             <RecoilRoot>
                 <Switch>
                     <Route exact path="/">
-                        <Home />
+                        <Inicio />
                     </Route>
                     <Route path="/testDesiciones">
                         <VisorDecisiones />
                     </Route>
                     <Route path="/inicio">
-                        <Inicio />
+                        <Home />
                     </Route>
                 </Switch>
             </RecoilRoot>
