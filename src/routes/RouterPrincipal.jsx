@@ -7,6 +7,7 @@ import {
 // Plugins a hacer routing
 import { Home } from '../views/home/Home';
 import { VisorDecisiones } from '../views/visor-decisiones/VisorDesiciones';
+import { Inicio } from '../views/inicio/Inicio';
 import { RecoilRoot } from 'recoil';
 
 export function RouterPrincipal() {
@@ -19,6 +20,9 @@ export function RouterPrincipal() {
                     </Route>
                     <Route path="/testDesiciones">
                         <VisorDecisiones />
+                    </Route>
+                    <Route path="/inicio">
+                        <Inicio />
                     </Route>
                 </Switch>
             </RecoilRoot>

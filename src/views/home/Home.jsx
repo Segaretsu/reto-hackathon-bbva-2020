@@ -8,7 +8,7 @@ const square = { width: 175, height: 175 }
 
 export function Home() {
     const { APP_NAME } = Constantes;
-    const { menu, grid, nav, opacarImg, contenedorPrincipal, parrafo, efectoHoverImgPrincipal, sombra, centrarContenido, textoInicial, frase} = Style;
+    const { menu, grid, nav, opacarImg, contenedorPrincipal, parrafo, efectoHoverImgPrincipal, sombra, textoInicial, sombreado, frase, posicionBoton} = Style;
 
     const [activeItem, setActiveItem] = useState('bio');
     const handleItemClick = (e, { name }) => setActiveItem(name);
@@ -69,6 +69,9 @@ export function Home() {
                                 </Reveal.Content>
                                 <Reveal.Content hidden>
                                     <Image src='https://react.semantic-ui.com/images/avatar/large/justen.jpg' size='massive' />
+                                    <div className={posicionBoton}>
+                                        <Button primary className={sombreado}>Tomar Decisión</Button>
+                                    </div>
                                 </Reveal.Content>
                             </Reveal>
 
@@ -84,6 +87,9 @@ export function Home() {
                                 </Reveal.Content>
                                 <Reveal.Content hidden>
                                     <Image src='https://react.semantic-ui.com/images/avatar/large/justen.jpg' size='massive' />
+                                    <div className={posicionBoton}>
+                                        <Button primary className={sombreado}>Tomar Decisión</Button>
+                                    </div>
                                 </Reveal.Content>
                             </Reveal>
                         </Grid.Column>
