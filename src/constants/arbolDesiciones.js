@@ -8,6 +8,7 @@ export function tomarDesicion(nodoActual) {
 
 export const desiciones = {
     decisionInicial: {
+        desicionTomada: {},
         opcion1: {
             newDesicion: "desicionPadre",
             rutaImagen: 'x',
@@ -40,7 +41,7 @@ export const desiciones = {
         opcion3: {
             newDesicion: '',
             rutaImagen: 'c',
-            descripcion: 'José decide no ir',
+            descripcion: 'José decide ir con sus amigos',
             seleccionada: false
         },
         sinHijos: false,
